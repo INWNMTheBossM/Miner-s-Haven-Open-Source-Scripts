@@ -1,3 +1,8 @@
+-- Services
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+
+local SacrificeLib = require(ReplicatedStorage.SacrificeLib)
+
 if Player:FindFirstChild('Sacrificed') and not Player:FindFirstChild('SecondSacrifice') then
     local CurrentIndex
     for i, Sacrifice in ipairs(SacrificeLib) do

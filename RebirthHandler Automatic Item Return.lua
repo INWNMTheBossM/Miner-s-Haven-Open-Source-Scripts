@@ -1,4 +1,4 @@
-if Player:FindFirstChild('Sacrificed') and not Player:FindFirstChild('Prestiged2') then
+if Player:FindFirstChild('Sacrificed') and not Player:FindFirstChild('SecondSacrifice') then
     local CurrentIndex
     for i, Sacrifice in ipairs(SacrificeLib) do
         if Player:FindFirstChild(Sacrifice.Name) then
@@ -10,7 +10,7 @@ if Player:FindFirstChild('Sacrificed') and not Player:FindFirstChild('Prestiged2
         if ItemReturn then
             ItemReturn = Sacrifice
             for i, Info in pairs(SacrificeLib[CurrentIndex + 1]) do
-                local NewSacrifice = string.match(Info, 'Sacrifice') or string.match(Info, 'Prestiged')
+                local NewSacrifice = string.match(Info, 'Sacrifice')
                 if NewSacrifice then
                     NewSacrifice = Info
                     if not Player:FindFirstChild(NewSacrifice) and (OldLife < ItemReturn and Life >= ItemReturn) then
